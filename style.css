@@ -1,0 +1,453 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/user.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.container {
+  padding: 10px 10%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logo span {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.logo .folio {
+  color: #ff004f;
+}
+
+ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+}
+
+ul li a:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.header-text {
+  margin: 17%;
+  cursor: pointer;
+}
+
+.header-text p {
+  font-size: 20px;
+  margin: 19px 0px;
+}
+
+.header-text p:hover {
+  color: rgb(208, 255, 0);
+}
+
+.header-text h1 {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.header-text h1 span {
+  color: #ff004f;
+}
+
+.header-text h1 span:hover {
+  color: #e4205e;
+}
+
+/* -------------about--------- */
+#about {
+  padding: 80px 0;
+  background-color: #000000;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  border: 1px solid rgba(66, 2, 2, 0.267);
+  box-shadow: 1px 1px 1px rgb(57, 21, 21);
+  border-radius: 415px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  font-size: 40px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sub-title::first-letter{
+  color: #ff004f;
+  font-size: 60px;
+}
+
+.tab-title {
+  display: flex;
+  margin: 20px 0px 40px;
+}
+
+.tab-link {
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-link::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.tab-link.active-link::after {
+   width: 100%;
+}
+
+.skill {
+  margin-right: 20px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#skills h2::first-letter{
+  color: #ff004f;
+  font-size: 30px;
+}
+
+.tab-content h2{
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+#skills .skill img{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin-right: 10px
+ }
+
+.tab-content ul li {
+  display: block;
+  list-style-type: circle;
+  margin: 10px 0;
+}
+
+.tab-content ul li span {
+  color: #ff004f;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active-tab {
+  display: block;
+} 
+
+table {
+  border: 3px solid white;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border-style: solid;
+  color: white;
+}
+
+table th {
+  color: #ff004f;
+  border: 3px solid white;
+}
+
+.my-project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5rem;
+}
+
+.project-container {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(120, 118, 118, 0.8);
+ margin: 50px 0;
+}
+
+
+.project-container img {
+  background-image: cover;
+  width: 100%;
+  height: 71%;
+}
+
+
+.project-container p {
+opacity: 0;
+font-size: 13px;
+}
+
+
+.layer {
+  background-color: rgb(10, 6, 6);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 1px;
+  opacity: 0.7;
+  color: white;
+  height: 100px;
+  transition:transform 0.5s ease-out;
+  cursor: pointer;
+}
+
+.project-container .layer h1{
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+} 
+
+.project-container .layer:hover {
+top: 250px;
+height: 500px;
+text-align: center;
+transform: translateY(-150px);
+}
+
+.project-container .layer p:hover {
+ visibility: visible;
+ opacity: 1;
+ color: white;
+ padding: 0px 5px;
+}
+
+.project-container .layer a{
+  visibility: visible;
+  opacity: 1;
+  color: white;
+ }
+
+.cantact-left {
+  flex-basis: 35%;
+}
+
+.cantact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin: 12px 0px;
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 5px;
+  font-size: 25px;
+}
+
+.social-icons a {
+  margin-right: 5px;
+  margin-top: 5px;
+  font-size: 31px;
+  color: white;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-7px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #ff004f;
+  color: white;
+  margin: 15px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.cantact-right form {
+  width: 100%
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 8px 15px;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background: #262525;
+  box-shadow: 1px 1px 5px rgba(77, 71, 71, 0.87);
+}
+
+.copyright {
+  width: 100%;
+  background-color: #262525;
+  padding: 8px;
+  color: rgb(154, 153, 153);
+  text-align: center;
+}
+
+.copyright i {
+  color: #ff004f;
+}
+
+/* -----------------------------css for small screen--------- */
+nav .fa-solid {
+  display: none;
+
+}
+
+@media only screen and (max-width:920px) {
+  .header-text {
+    margin: 28% 0%;
+  }
+
+  .header-text h1 {
+    font-size: 40px;
+  }
+}
+
+
+@media only screen and (max-width:600px) {
+  #header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/user1.jpg");
+  }
+
+  .header-text p {
+      font-size: 15px;
+      position: absolute;
+      top: 239px;
+      left: 64px;
+  }
+  
+  .header-text h1 {
+    font-size: 23px;
+    position: absolute;
+    top: 284px;
+    left: 48px;
+  }
+
+  nav .fa-solid {
+    display: block;
+  }
+
+  nav ul {
+    background-color: #e4205e;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 30px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 26px;
+    left: 32px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+
+  .my-project{
+    gap: 0;
+  }
+}
+
+
+

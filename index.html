@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio Website</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,900&family=Poppins:ital,wght@0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <span>Port</span><span class="folio" style=" font-size: 50px;">folio<span>
+        </div>
+        <ul id="sidemenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#about">Skills</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="header-text">
+        <p>Full Stack Developer</p>
+        <h1>Hi,I'm <span>Lanchana</span></h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- -----------------------------------------------------About------------------------------------------------ -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+
+        <div class="about-col-1">
+          <img src="images/user1.jpg" alt="image">
+        </div>
+
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me.</h1>
+          <p>
+            As a fresh full stack developer seeking an entry-level position where I can learn professional experience in
+            programming and offer my skills in coding and program design.I am a quick learner, always seeking
+            opportunities to enhance my skills and stay updated with emerging technologies.
+          </p>
+
+          <div class="tab-title">
+            <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-link" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-content active-tab" id="skills">
+            <h2>Front-End Skills:-</h2>
+            <div class="skill">
+              <img src="IT_skill/htmllogo.png" alt="">
+              <img src="IT_skill/csslogo.png" alt="">
+            </div>
+
+
+            <h2>Progrming Language:-</h2>
+            <div class="skill">
+              <img src="IT_skill/javalogo.png" alt="java-logo">
+              <img src="IT_skill/javascriptlogo.png" alt="js-logo">
+            </div>
+
+            <h2>Database:-</h2>
+            <div class="skill">
+              <img src="IT_skill/oracledblogo.png" alt="oracle_dblogo">
+            </div>
+          </div>
+
+
+          <div class="tab-content" id="education">
+            <table>
+              <thead>
+                <th>YOP</th>
+                <th>INSTITUTE</th>
+                <th>COURSE</th>
+                <th>PERCENTAGE</th>
+              </thead>
+              <tr>
+                <td>2022</td>
+                <td>Anjuman College For Women</td>
+                <td>BSc</td>
+                <td>91.35%</td>
+              </tr>
+              <tr>
+                <td>2019</td>
+                <td>RNShetty PU College </td>
+                <td>PUC</td>
+                <td>92.16%</td>
+              </tr>
+              <tr>
+                <td>2017</td>
+                <td>RNS Vidyaniketan Murudeshwar</td>
+                <td>SSLC</td>
+                <td>90.56%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------Project----------------------------------------------------- -->
+  <div id="project">
+    <div class="container">
+      <h1 class="sub-title">My Project</h1>
+      <div class="my-project">
+
+        <div class="project-container">
+          <img src="images/image1.jpg" alt="rock-paper-game">
+          <div class="layer">
+            <h1>Rock Paper Scissors</h1>
+            <p>Developed a dynamic and interactive rock-paper-scissors game using HTML, CSS, and JavaScript.
+              Implemented game functionality using JavaScript, allowing
+              players to make their selections by clicking on icons
+              representing rock, paper, or scissors. <br>
+              <a href="https://github.com/LanchuNaik/Rock-paper-scissors.git"><i
+                  class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+            </p>
+
+          </div>
+        </div>
+
+        <div class="project-container">
+          <img src="images/image2.jpg">
+          <div class="layer">
+            <h1>Ecommerce-website</h1>
+            <p>
+              I have created ECommerce websites by using Javascript ,HTML and CSS. Successfully created and implemented
+              an engaging 'Add to Cart' button and user-friendly quantity controls for a seamless
+              shopping. <br>
+              <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="project-container">
+          <img src="images/image3.jpg">
+          <div class="layer">
+            <h1>Image Search App</h1>
+            <p>Developed a dynamic image search application using JavaScript, HTML, and CSS, leveraging the Unsplash API
+              as the primary
+              image source.
+              Implemented a user-friendly interface that allows users to
+              search for high-quality images based on keywords. <br>
+              <a href="https://github.com/LanchuNaik/Image-search-App.git"><i
+                  class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="project-container">
+          <img src="images/image4.jpg">
+          <div class="layer">
+            <h1>SocialBook_Clone</h1>
+            <p>Designed and developed a social book clone using HTML and CSS, offering a dynamic platform for users to
+              connect and share content. Incorporated a dark theme mode for enhanced user experience.
+              <br>
+              <a href="https://github.com/LanchuNaik/SocialBook_clone.git"><i
+                  class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ------------------------------------------contact--------------------------------------------------------- -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>lanchananaik@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>8095512810</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.github.com/"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <a href="Aug_resume.pdf" downlode class="btn btn2">Downlode cv</a>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Email">
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright @lanchanaNaik. portfolio by me<i class="fa-solid fa-heart"></i></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
